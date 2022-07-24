@@ -1,0 +1,169 @@
+.contenedor > *{
+	padding: 5px;
+}
+
+html {
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding:0;
+}
+
+body {
+	font-family: "Public Sans", sans-serif;
+	font-size: 1.2rem;
+	min-height: 100%;
+}
+
+p{
+	text-align: justify;
+}
+
+.contenedor{
+	display: grid;
+	gap: 10px;
+	grid-template-areas:
+	"header"
+	"columna1"
+	"columna2"
+	"columna3"
+	"footer";
+	grid-template-areas:
+		"header header header" 100px
+		"columna1 columna2 columna3" auto
+		"footer footer footer" 50px /
+		auto     auto    auto;
+}
+
+.contenedor{
+		grid-template:
+		"header header header" 70px
+		"columna1 columna2 columna3" auto
+		"footer footer footer" 65px /
+		auto     auto    auto;
+	}
+
+.header{
+	padding-left: 75px;
+	background-color: #E74C3C;
+	color: white;
+	grid-area: header;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer{
+	grid-area: footer;
+	color: #E74C3C;
+	text-align: center;
+}
+ 
+.columna1, .columna2, .columna3{
+	margin-top: 5px;
+}
+
+.columna1{
+	margin-left: 70px;
+	grid-area: columna1;
+	color: black;
+	justify-content: center;	
+	align-items: center;
+}
+
+.columna2{
+
+	grid-area: columna2;
+	color: black;
+	justify-content: center;
+	align-items: center;
+}
+
+.columna3{
+	margin-right: 70px;
+	grid-area: columna3;
+	color: black;
+	justify-content: center;
+	align-items: center;
+}
+
+h4{
+	margin: 0;
+}
+
+.interior{
+	color: #E74C3C;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+img{
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.redes{
+	margin-top: 0px;
+	display: inline-table;
+	justify-content: center;
+}
+
+p.centrado{
+	text-align: center;
+}
+
+.menu a{
+	color: white;
+	text-decoration: none;
+	padding: 0 10px;
+	transition: 0.4s;
+}
+
+.menu{
+	margin-right: 70px;
+}
+
+
+@media screen and (min-width: 640px) and (max-width: 1280px){
+	
+	.contenedor{
+		grid-template:
+		"header header" 100px
+		"columna1 columna2" auto
+		"columna3 columna3" auto
+		"footer footer" 50px /
+		auto auto;
+	}
+	
+	.columna2{
+	margin-right: 70px;
+	}
+	
+	.columna3{
+	margin-right: 70px;
+	margin-left: 70px;
+	}
+	
+}
+@media screen and (max-width: 640px){
+	
+	.contenedor{	
+	
+	grid-template:
+		"header"
+		"columna1"
+		"columna2"
+		"columna3"
+		"footer";
+	}
+	
+	.columna1, .columna2, .columna3{
+	margin-right: 70px;
+	margin-left: 70px;
+	}
+}
